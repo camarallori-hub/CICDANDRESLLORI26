@@ -1,0 +1,21 @@
+id_modelo,nombre_modelo,tipo_modelo,empresa,año_lanzamiento
+M001,ModeloAI_1,Code,xAI,2022
+M002,ModeloAI_2,Vision,OpenAI,2023
+M003,ModeloAI_3,RAG,Google,2023
+M004,ModeloAI_4,RAG,Google,2021
+M005,ModeloAI_5,RAG,Google,2021
+M006,ModeloAI_6,RAG,Mistral AI,2021
+M007,ModeloAI_7,Vision,AI21,2025
+M008,ModeloAI_8,Code,Meta,2022
+M009,ModeloAI_9,RAG,xAI,2021
+M010,ModeloAI_10,Code,Microsoft,2021
+M011,ModeloAI_11,RAG,Anthropic,2024
+M012,ModeloAI_12,Code,Meta,2023
+M013,ModeloAI_13,Vision,Mistral AI,2026
+M014,ModeloAI_14,LLM,Anthropic,2021
+M015,ModeloAI_15,RAG,Cohere,2026
+M016,ModeloAI_16,RAG,NVIDIA,2023
+M017,ModeloAI_17,Code,AI21,2025
+M018,ModeloAI_18,Multimodal,NVIDIA,2024
+M019,ModeloAI_19,RAG,Cohere,2023
+M020,ModeloAI_20,Vision,Anthropic,2021
