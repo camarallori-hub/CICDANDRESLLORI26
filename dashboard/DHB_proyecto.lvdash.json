@@ -1,0 +1,704 @@
+{
+  "datasets": [
+    {
+      "name": "ef17e594",
+      "displayName": "uso_aplicaciones_ia",
+      "config": {
+        "version": "1.1",
+        "source": "catalog_au.golden.uso_aplicaciones_ia",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "name": "dfc1058c",
+      "displayName": "Untitled page",
+      "layout": [
+        {
+          "widget": {
+            "name": "titulo",
+            "spec": {
+              "widgetType": "text",
+              "version": 1,
+              "encodings": {
+                "text": {
+                  "lines": [
+                    "# Uso de Aplicaciones de IA\n",
+                    "Visión general de usuarios, aplicaciones y modelos de IA: quién usa la IA, dónde, para qué y con qué modelos."
+                  ],
+                  "fields": []
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_usuarios",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "countdistinct(id_usuario)",
+                      "expression": "COUNT(DISTINCT `id_usuario`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Usuarios únicos"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "countdistinct(id_usuario)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_horas",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "sum(uso_mensual_horas)",
+                      "expression": "SUM(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Horas de uso mensual totales"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(uso_mensual_horas)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 2,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_prom",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "avg(uso_mensual_horas)",
+                      "expression": "AVG(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Promedio horas por registro"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg(uso_mensual_horas)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 2,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_apps",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "countdistinct(id_aplicacion)",
+                      "expression": "COUNT(DISTINCT `id_aplicacion`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Aplicaciones distintas"
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "countdistinct(id_aplicacion)",
+                  "rowNumber": 0
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 2,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "horas_pais",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "pais",
+                      "expression": "`pais`"
+                    },
+                    {
+                      "name": "sum(uso_mensual_horas)",
+                      "expression": "SUM(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Horas de uso por país"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "pais",
+                  "displayName": "pais",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(uso_mensual_horas)",
+                  "displayName": "uso_mensual_horas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "pais",
+                  "displayName": "pais",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 8,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "categoria",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "measure(count)",
+                      "expression": "MEASURE(`count`)"
+                    },
+                    {
+                      "name": "categoria_uso",
+                      "expression": "`categoria_uso`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Distribución por categoría de uso"
+              },
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "measure(count)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "count"
+                },
+                "color": {
+                  "fieldName": "categoria_uso",
+                  "displayName": "categoria_uso",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 5,
+            "width": 4,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "horas_sector",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "sector",
+                      "expression": "`sector`"
+                    },
+                    {
+                      "name": "sum(uso_mensual_horas)",
+                      "expression": "SUM(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Horas de uso por sector"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sector",
+                  "displayName": "sector",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(uso_mensual_horas)",
+                  "displayName": "uso_mensual_horas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "sector",
+                  "displayName": "sector",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "empresa_tipo",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "tipo_modelo",
+                      "expression": "`tipo_modelo`"
+                    },
+                    {
+                      "name": "empresa",
+                      "expression": "`empresa`"
+                    },
+                    {
+                      "name": "measure(count)",
+                      "expression": "MEASURE(`count`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Uso por empresa y tipo de modelo"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "empresa",
+                  "displayName": "empresa",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(count)",
+                  "displayName": "count",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "tipo_modelo",
+                  "displayName": "tipo_modelo",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 12,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "top_apps",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "nombre_aplicacion",
+                      "expression": "`nombre_aplicacion`"
+                    },
+                    {
+                      "name": "sum(uso_mensual_horas)",
+                      "expression": "SUM(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Aplicaciones más usadas"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "nombre_aplicacion",
+                  "displayName": "nombre_aplicacion",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(uso_mensual_horas)",
+                  "displayName": "uso_mensual_horas",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "nombre_aplicacion",
+                  "displayName": "nombre_aplicacion",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 19,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "anio_modelo",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "anio_lanzamiento",
+                      "expression": "`anio_lanzamiento`"
+                    },
+                    {
+                      "name": "measure(count)",
+                      "expression": "MEASURE(`count`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Uso según año de lanzamiento del modelo"
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "anio_lanzamiento",
+                  "displayName": "Año de lanzamiento",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(count)",
+                  "displayName": "count",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "anio_lanzamiento",
+                  "displayName": "Año de lanzamiento",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 19,
+            "width": 6,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "pivot_modelo",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ef17e594",
+                  "fields": [
+                    {
+                      "name": "nombre_modelo",
+                      "expression": "`nombre_modelo`"
+                    },
+                    {
+                      "name": "categoria_uso",
+                      "expression": "`categoria_uso`"
+                    },
+                    {
+                      "name": "sum(uso_mensual_horas)",
+                      "expression": "SUM(`uso_mensual_horas`)"
+                    }
+                  ],
+                  "cubeGroupingSets": {
+                    "sets": [
+                      {
+                        "fieldNames": [
+                          "nombre_modelo"
+                        ]
+                      },
+                      {
+                        "fieldNames": [
+                          "categoria_uso"
+                        ]
+                      }
+                    ]
+                  },
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "ASC",
+                      "expression": "`nombre_modelo`"
+                    },
+                    {
+                      "direction": "ASC",
+                      "expression": "`categoria_uso`"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": "Horas por modelo y categoría de uso"
+              },
+              "version": 3,
+              "widgetType": "pivot",
+              "encodings": {
+                "rows": [
+                  {
+                    "fieldName": "nombre_modelo"
+                  }
+                ],
+                "columns": [
+                  {
+                    "fieldName": "categoria_uso"
+                  }
+                ],
+                "cell": {
+                  "type": "single-cell",
+                  "fieldName": "sum(uso_mensual_horas)",
+                  "cellType": "text"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 26,
+            "width": 12,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}

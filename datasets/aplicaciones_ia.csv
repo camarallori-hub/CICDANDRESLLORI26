@@ -1,0 +1,101 @@
+id_aplicacion,nombre_aplicacion,sector,id_modelo
+A001,Aplicacion_IA_1,Legal,M002
+A002,Aplicacion_IA_2,Marketing,M013
+A003,Aplicacion_IA_3,Retail,M007
+A004,Aplicacion_IA_4,Atención al cliente,M009
+A005,Aplicacion_IA_5,Retail,M001
+A006,Aplicacion_IA_6,Finanzas,M007
+A007,Aplicacion_IA_7,Retail,M011
+A008,Aplicacion_IA_8,Salud,M015
+A009,Aplicacion_IA_9,Retail,M012
+A010,Aplicacion_IA_10,Atención al cliente,M003
+A011,Aplicacion_IA_11,Marketing,M001
+A012,Aplicacion_IA_12,Marketing,M011
+A013,Aplicacion_IA_13,Retail,M009
+A014,Aplicacion_IA_14,Salud,M002
+A015,Aplicacion_IA_15,Finanzas,M019
+A016,Aplicacion_IA_16,Salud,M007
+A017,Aplicacion_IA_17,Salud,M002
+A018,Aplicacion_IA_18,Legal,M015
+A019,Aplicacion_IA_19,Retail,M003
+A020,Aplicacion_IA_20,Atención al cliente,M004
+A021,Aplicacion_IA_21,Marketing,M009
+A022,Aplicacion_IA_22,Salud,M004
+A023,Aplicacion_IA_23,Finanzas,M011
+A024,Aplicacion_IA_24,Manufactura,M019
+A025,Aplicacion_IA_25,Marketing,M019
+A026,Aplicacion_IA_26,Marketing,M012
+A027,Aplicacion_IA_27,Legal,M008
+A028,Aplicacion_IA_28,Retail,M007
+A029,Aplicacion_IA_29,Manufactura,M019
+A030,Aplicacion_IA_30,Atención al cliente,M001
+A031,Aplicacion_IA_31,Atención al cliente,M008
+A032,Aplicacion_IA_32,Salud,M019
+A033,Aplicacion_IA_33,Retail,M020
+A034,Aplicacion_IA_34,Atención al cliente,M005
+A035,Aplicacion_IA_35,Salud,M004
+A036,Aplicacion_IA_36,Marketing,M015
+A037,Aplicacion_IA_37,Manufactura,M003
+A038,Aplicacion_IA_38,Finanzas,M014
+A039,Aplicacion_IA_39,Salud,M002
+A040,Aplicacion_IA_40,Atención al cliente,M006
+A041,Aplicacion_IA_41,Retail,M001
+A042,Aplicacion_IA_42,Salud,M010
+A043,Aplicacion_IA_43,Manufactura,M013
+A044,Aplicacion_IA_44,Atención al cliente,M003
+A045,Aplicacion_IA_45,Legal,M003
+A046,Aplicacion_IA_46,Manufactura,M020
+A047,Aplicacion_IA_47,Manufactura,M017
+A048,Aplicacion_IA_48,Retail,M017
+A049,Aplicacion_IA_49,Finanzas,M006
+A050,Aplicacion_IA_50,Finanzas,M019
+A051,Aplicacion_IA_51,Legal,M005
+A052,Aplicacion_IA_52,Manufactura,M003
+A053,Aplicacion_IA_53,Educación,M008
+A054,Aplicacion_IA_54,Educación,M001
+A055,Aplicacion_IA_55,Legal,M013
+A056,Aplicacion_IA_56,Finanzas,M002
+A057,Aplicacion_IA_57,Retail,M002
+A058,Aplicacion_IA_58,Retail,M004
+A059,Aplicacion_IA_59,Salud,M006
+A060,Aplicacion_IA_60,Retail,M005
+A061,Aplicacion_IA_61,Marketing,M013
+A062,Aplicacion_IA_62,Educación,M012
+A063,Aplicacion_IA_63,Legal,M005
+A064,Aplicacion_IA_64,Salud,M014
+A065,Aplicacion_IA_65,Finanzas,M010
+A066,Aplicacion_IA_66,Legal,M012
+A067,Aplicacion_IA_67,Atención al cliente,M013
+A068,Aplicacion_IA_68,Educación,M019
+A069,Aplicacion_IA_69,Salud,M019
+A070,Aplicacion_IA_70,Atención al cliente,M005
+A071,Aplicacion_IA_71,Salud,M018
+A072,Aplicacion_IA_72,Manufactura,M008
+A073,Aplicacion_IA_73,Legal,M010
+A074,Aplicacion_IA_74,Atención al cliente,M004
+A075,Aplicacion_IA_75,Marketing,M001
+A076,Aplicacion_IA_76,Salud,M008
+A077,Aplicacion_IA_77,Retail,M002
+A078,Aplicacion_IA_78,Legal,M003
+A079,Aplicacion_IA_79,Educación,M007
+A080,Aplicacion_IA_80,Educación,M016
+A081,Aplicacion_IA_81,Manufactura,M008
+A082,Aplicacion_IA_82,Atención al cliente,M009
+A083,Aplicacion_IA_83,Manufactura,M005
+A084,Aplicacion_IA_84,Educación,M004
+A085,Aplicacion_IA_85,Legal,M003
+A086,Aplicacion_IA_86,Atención al cliente,M013
+A087,Aplicacion_IA_87,Manufactura,M013
+A088,Aplicacion_IA_88,Finanzas,M007
+A089,Aplicacion_IA_89,Finanzas,M016
+A090,Aplicacion_IA_90,Salud,M012
+A091,Aplicacion_IA_91,Marketing,M009
+A092,Aplicacion_IA_92,Retail,M018
+A093,Aplicacion_IA_93,Marketing,M019
+A094,Aplicacion_IA_94,Marketing,M011
+A095,Aplicacion_IA_95,Salud,M001
+A096,Aplicacion_IA_96,Retail,M018
+A097,Aplicacion_IA_97,Atención al cliente,M010
+A098,Aplicacion_IA_98,Legal,M013
+A099,Aplicacion_IA_99,Educación,M012
+A100,Aplicacion_IA_100,Educación,M002
